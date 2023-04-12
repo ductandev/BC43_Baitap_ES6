@@ -9,12 +9,16 @@ export class ListPerson {
 
     addStudent(student) {
         this.listStudent.push(student);
+        this.sortArray(this.listStudent) 
+        
     }
     addEmployee(employee) {
         this.listEmployee.push(employee);
+        this.sortArray(this.listEmployee) 
     }
     addCustomer(customer) {
         this.listCustomer.push(customer);
+        this.sortArray(this.listCustomer) 
     }
 
     renderTableStudent(selectorTbodyStudent, tableStudent) {
@@ -78,7 +82,6 @@ export class ListPerson {
         return htmlContentEmployee;
     }
 
-
     renderTableCustomer(selectorTbodyCustomer, tableCustomer) {
         let htmlContentCustomer = '';
         for (let customer of this.listCustomer) {
@@ -126,19 +129,22 @@ export class ListPerson {
     getLocalStoreListStudent() {
         if (localStorage.getItem('Student')) {
             let stringStudent = localStorage.getItem('Student');
-            this.listStudent = JSON.parse(stringStudent)
+            this.listStudent = JSON.parse(stringStudent);
+            this.sortArray(this.listStudent)            
         }
     }
     getLocalStoreListEmployee() {
         if (localStorage.getItem('Employee')) {
             let stringEmployee = localStorage.getItem('Employee');
             this.listEmployee = JSON.parse(stringEmployee)
+            this.sortArray(this.listEmployee) 
         }
     }
     getLocalStoreListCustomer() {
         if (localStorage.getItem('Customer')) {
             let stringCustomer = localStorage.getItem('Customer');
             this.listCustomer = JSON.parse(stringCustomer)
+            this.sortArray(this.listCustomer) 
         }
     }
 
@@ -205,6 +211,7 @@ export class ListPerson {
                 }
             }
         }
+        this.sortArray(this.listStudent)            
     }
     updateEmployee(employeeUpdate){
         for (let employee of this.listEmployee) {
@@ -214,6 +221,7 @@ export class ListPerson {
                 }
             }
         }
+        this.sortArray(this.listEmployee)            
     }
     updateCustomer(customerUpdate){
         for (let customer of this.listCustomer) {
@@ -223,9 +231,15 @@ export class ListPerson {
                 }
             }
         }
+        this.sortArray(this.listCustomer)            
     }
 
-
-
-
+    // ----------------SORT ARRAY-------------------------
+    sortArray(arr){
+        arr.sort(function (x, y) {
+            let a = x.name.toUpperCase(),
+                b = y.name.toUpperCase();
+            return a == b ? 0 : a > b ? 1 : -1;
+        });
+    }
 }

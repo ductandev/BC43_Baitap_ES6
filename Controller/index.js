@@ -6,8 +6,6 @@ import { Student } from "../Models/Student.js"
 let tableStudent = document.querySelector('#tableStudent')
 let tableEmployee = document.querySelector('#tableEmployee')
 let tableCustomer = document.querySelector('#tableCustomer')
-let headerTitle = document.querySelector('#headerTitle')
-let addUser = document.querySelector('#btnAddUser')
  
 let listPerson = new ListPerson();
 // --------GET LOCALSTORAGE----------
@@ -260,13 +258,6 @@ document.querySelector("#btnUpdate").onclick = function () {
 }
 
 
-
-
-
-
-
-
-
 document.getElementById('btnAddUser').onclick = function(){
     document.querySelector("#FormInputStudent").classList.add('d-none');
     document.querySelector("#FormInputEmployee").classList.add('d-none');
@@ -276,9 +267,12 @@ document.getElementById('btnAddUser').onclick = function(){
     document.getElementById('chooseUserObject').disabled = false;
     document.getElementById('code').disabled = false;
 
-    // CLEAR-FORM
+    //------------------------CLEAR-FORM--------------------------------
     var arrStudent = document.querySelectorAll('.modal-body input, .modal-body select');
     for (let input of arrStudent) {
         input.value = ""
     }
 }
+
+
+// console.table(arr);
