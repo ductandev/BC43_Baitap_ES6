@@ -1,7 +1,9 @@
+import { Validation } from "../Utility/Validation.js";
 import { Customer } from "./Customer.js";
 import { Employee } from "./Employee.js";
 import { Student } from "./Student.js";
 
+let validation = new Validation();
 export class ListPerson {
     listStudent = [];
     listEmployee = [];
@@ -239,6 +241,8 @@ export class ListPerson {
         arr.sort(function (x, y) {
             let a = x.name.toUpperCase(),
                 b = y.name.toUpperCase();
+                a = validation.stringToslug(a);
+                b = validation.stringToslug(b);
             return a == b ? 0 : a > b ? 1 : -1;
         });
     }
