@@ -19,17 +19,17 @@ listPerson.renderTableEmployee('#tableEmployeeInfo', '#showTableEmployee');
 listPerson.renderTableCustomer('#tableCustomerInfo', '#showTableCustomer');
 
 
-DOM.btnShowTableStudent.onclick = function () {
+DOM.btnShowTableStudent.onclick = () => {
     DOM.tableStudent.classList.remove('d-none')
     DOM.tableEmployee.classList.add('d-none')
     DOM.tableCustomer.classList.add('d-none')
 }
-DOM.btnShowTableEmployee.onclick = function () {
+DOM.btnShowTableEmployee.onclick = () => {
     DOM.tableStudent.classList.add('d-none')
     DOM.tableEmployee.classList.remove('d-none')
     DOM.tableCustomer.classList.add('d-none')
 }
-DOM.btnShowTableCustomer.onclick = function () {
+DOM.btnShowTableCustomer.onclick = () => {
     DOM.tableStudent.classList.add('d-none')
     DOM.tableEmployee.classList.add('d-none')
     DOM.tableCustomer.classList.remove('d-none')
@@ -61,7 +61,7 @@ DOM.tagSelectedObject.addEventListener("change", (event) => {
 })
 
 
-DOM.btnAdd.onclick = function () {
+DOM.btnAdd.onclick = () => {
     // input: Student, Employee, Customer
     var student = new Student();
     var employee = new Employee();
@@ -157,21 +157,21 @@ DOM.btnAdd.onclick = function () {
 }
 
 // --------------DELETE------------------
-window.deleteStudent = function (code) {
+window.deleteStudent = (code) => {
     listPerson.deleteStudent(code)
     // Render table student
     listPerson.renderTableStudent('#tableStudentInfo', '#showTableStudent');
     listPerson.saveLocalStoreListStudent();
 }
 
-window.deleteEmployee = function (code) {
+window.deleteEmployee = (code) => {
     listPerson.deleteEmployee(code)
     // Render table employee
     listPerson.renderTableEmployee('#tableEmployeeInfo', '#showTableEmployee');
     listPerson.saveLocalStoreListEmployee();
 }
 
-window.deleteCustomer = function (code) {
+window.deleteCustomer = (code) => {
     listPerson.deleteCustomer(code)
     // Render table customer
     listPerson.renderTableCustomer('#tableCustomerInfo', '#showTableCustomer');
@@ -180,7 +180,7 @@ window.deleteCustomer = function (code) {
 
 
 // -----------------EDIT------------------
-window.editStudent = function (code) {
+window.editStudent = (code) => {
     DOM.btnAddUser.click()
     DOM.tagSelectedObject.value = "student";
     DOM.objectSelected.disabled = true;
@@ -201,7 +201,7 @@ window.editStudent = function (code) {
 }
 
 
-window.editEmployee = function (code) {
+window.editEmployee = (code) => {
     DOM.btnAddUser.click()
     DOM.tagSelectedObject.value = "employee";
     DOM.objectSelected.disabled = true;
@@ -222,7 +222,7 @@ window.editEmployee = function (code) {
 }
 
 
-window.editCustomer = function (code) {
+window.editCustomer = (code) => {
     DOM.btnAddUser.click()
     DOM.tagSelectedObject.value = "customer";
     DOM.objectSelected.disabled = true;
@@ -243,7 +243,7 @@ window.editCustomer = function (code) {
 }
 
 
-DOM.btnUpdate.onclick = function () {
+DOM.btnUpdate.onclick = () => {
     // input: Student, Employee, Customer
     var studentUpdate = new Student();
     var employeeUpdate = new Employee();
@@ -287,7 +287,7 @@ DOM.btnUpdate.onclick = function () {
 }
 
 
-DOM.btnAddUser.onclick = function () {
+DOM.btnAddUser.onclick = () => {
     DOM.showFormInputStudent.classList.add('d-none');
     DOM.showFormInputEmployee.classList.add('d-none');
     DOM.showFormInputCustomer.classList.add('d-none');
@@ -326,7 +326,7 @@ function checkValidationObject(object, valid){
 }
 
 // -------------------------SEARCH-------------------------------
-document.getElementById('searchAddress').oninput = function () {
+document.getElementById('searchAddress').oninput = () => {
     if (DOM.tableStudent.classList.value === 'table-responsive-lg wrapper'){
         var tuKhoa = document.getElementById('searchAddress').value;
         tuKhoa = validation.stringToslug(tuKhoa);
