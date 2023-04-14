@@ -163,9 +163,9 @@
                                         <option value="employee">Nhân Viên</option>
                                         <option value="customer">Khách hàng</option>
                                     </select>
-                                    <div id="invalidLoai" class="invalid-feedback">
+                                    <span id="invalidObject" class="invalid-feedback d-inline">
 
-                                    </div>
+                                    </span>
                                 </div>
 
                                 <div class="col-6">
@@ -178,29 +178,34 @@
                                     <label for="name" class="fw-bold">Họ và tên:</label>
                                     <input type="text" class="form-control" id="name" placeholder="Nhập họ tên"
                                         required>
-                                    <div id="invalidName" class="invalid-feedback">
-                                    </div>
+                                    <span id="invalidName" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidName-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                                 <div class="col-lg-6 mb-3">
                                     <label for="address" class="fw-bold">Địa chỉ:</label>
                                     <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ"
                                         required>
-                                    <div id="invalidAdrress" class="invalid-form">
-                                    </div>
+                                    <span id="invalidAdrress" class="invalid-feedback">
+                                    </span>
                                 </div>
                                 <div class="col-lg-6 mb-3">
                                     <label for="code" class="fw-bold">Mã:</label>
                                     <input type="text" class="form-control" id="code" placeholder="Nhập mã" required>
-                                    <div id="invalidCode" class="invalid-feedback">
-
-                                    </div>
+                                    <span id="invalidCode" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidCode-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                                 <div class="col-lg-6 mb-3">
                                     <label for="email" class="fw-bold">Email:</label>
                                     <input type="text" class="form-control" id="email" placeholder="Nhập email"
                                         required>
-                                    <div id="invalidEmail" class="invalid-feedback">
-                                    </div>
+                                    <span id="invalidEmail" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidEmail-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                             </div>
 
@@ -209,22 +214,28 @@
                                     <label for="scoreMath" class="fw-bold">Điểm toán:</label>
                                     <input type="number" class="form-control" id="scoreMath"
                                         placeholder="Nhập điểm toán" required>
-                                    <div id="invalidScoreMath" class="invalid-feedback">
-                                    </div>
+                                    <span id="invalidScoreMath" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidScoreMath-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="scorePhysics" class="fw-bold">Điểm lý:</label>
                                     <input type="number" class="form-control" id="scorePhysics"
                                         placeholder="Nhập điểm lý" required>
-                                    <div id="invalidScorePhysics" class="invalid-form">
-                                    </div>
+                                    <span id="invalidScorePhysics" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidScorePhysics-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="scoreChemistry" class="fw-bold">Điểm hóa:</label>
                                     <input type="number" class="form-control" id="scoreChemistry"
                                         placeholder="Nhập điểm hóa" required>
-                                    <div id="invalidScoreChemistry" class="invalid-feedback">
-                                    </div>
+                                    <span id="invalidScoreChemistry" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidScoreChemistry-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                             </div>
 
@@ -233,15 +244,19 @@
                                     <label for="dayWorking" class="fw-bold">Số ngày làm việc:</label>
                                     <input type="number" class="form-control" id="dayWorking"
                                         placeholder="Nhập Số ngày làm việc" required>
-                                    <div id="invalidDayWorking" class="invalid-feedback">
-                                    </div>
+                                    <span id="invalidDayWorking" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidDayWorking-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                                 <div class="col-lg-6 mb-3">
                                     <label for="dailyWage" class="fw-bold">Lương theo ngày:</label>
                                     <input type="number" class="form-control" id="dailyWage"
                                         placeholder="Nhập mức lương theo ngày" required>
-                                    <div id="invalidDailyWage" class="invalid-form">
-                                    </div>
+                                    <span id="invalidDailyWage" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidDailyWage-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                             </div>
 
@@ -250,22 +265,24 @@
                                     <label for="nameCompany" class="fw-bold">Tên công ty:</label>
                                     <input type="text" class="form-control" id="nameCompany"
                                         placeholder="Nhập tên công ty" required>
-                                    <div id="invalidNameCompany" class="invalid-feedback">
-                                    </div>
+                                    <span id="invalidNameCompany" class="invalid-feedback">
+                                    </span>
                                 </div>
                                 <div class="col-lg-4 mb-3">
                                     <label for="invoiceValue" class="fw-bold">Trị giá hóa đơn:</label>
                                     <input type="number" class="form-control" id="invoiceValue"
                                         placeholder="Nhập trị giá hóa đơn" required>
-                                    <div id="invalidInvoiceValue" class="invalid-form">
-                                    </div>
+                                    <span id="invalidInvoiceValue" class="invalid-feedback d-inline">
+                                    </span>
+                                    <span id="invalidInvoiceValue-letter" class="invalid-feedback d-inline">
+                                    </span>
                                 </div>
                                 <div class="col-lg-4 mb-3">
                                     <label for="evaluate" class="fw-bold">Đánh giá:</label>
                                     <input type="text" class="form-control" id="evaluate" placeholder="Nhập đánh giá"
                                         required>
-                                    <div id="invalidEvaluate" class="invalid-feedback">
-                                    </div>
+                                    <span id="invalidEvaluate" class="invalid-feedback">
+                                    </span>
                                 </div>
                             </div>
 

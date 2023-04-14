@@ -27,4 +27,12 @@ export const DOM = {
     btnUpdate: document.querySelector("#btnUpdate"),
     btnAdd: document.querySelector("#btnAdd"),
     btnClose: document.querySelector('button[data-dismiss]'),
+
+    btnShowTableStudent: document.querySelector('#showTableStudent'),
+    btnShowTableEmployee: document.querySelector('#showTableEmployee'),
+    btnShowTableCustomer: document.querySelector('#showTableCustomer'),
+
+    // ----------------------Validation info---------------
+    validationInfo: document.querySelectorAll('.modal-body span'),
+    invalidObjectInfo: document.querySelector("#invalidObject"),
 }
